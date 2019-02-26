@@ -1,0 +1,1457 @@
+
+<!DOCTYPE html>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <script src="https://crab-in-the-northeast.github.io/live2d/autoload.js"></script>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #1E92FB;
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB;
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;
+        border-left-color: #1E92FB;   
+    }
+</style>
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="b5DAJuWf3i" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://crab-in-the-northeast.github.io/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="https://crab-in-the-northeast.github.io/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="https://crab-in-the-northeast.github.io/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="https://crab-in-the-northeast.github.io/images/favicon.ico?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Live2D 看板娘 v1.4 / Demo 3            Live2D 看板娘 v1.4 / Demo 3      - 内置 waifu-tips.json (博客园等网站引用推荐)              Demo 1 - 常规引用         Demo 2 - 自动加载 autoload.js         Demo 3 (当前面页)">
+<meta name="keywords" content="ummmmmm">
+<meta property="og:type" content="website">
+<meta property="og:title" content="blog-东北小蟹蟹">
+<meta property="og:url" content="https://crab-in-the-northeast.github.io/demo3-waifu-tips.html">
+<meta property="og:site_name" content="blog-东北小蟹蟹">
+<meta property="og:description" content="Live2D 看板娘 v1.4 / Demo 3            Live2D 看板娘 v1.4 / Demo 3      - 内置 waifu-tips.json (博客园等网站引用推荐)              Demo 1 - 常规引用         Demo 2 - 自动加载 autoload.js         Demo 3 (当前面页)">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-11-12T17:33:20.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="blog-东北小蟹蟹">
+<meta name="twitter:description" content="Live2D 看板娘 v1.4 / Demo 3            Live2D 看板娘 v1.4 / Demo 3      - 内置 waifu-tips.json (博客园等网站引用推荐)              Demo 1 - 常规引用         Demo 2 - 自动加载 autoload.js         Demo 3 (当前面页)">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主 author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"你想找什么呀？蟹蟹帮你找找看~","hits_empty":"蟹蟹翻箱倒柜，也没找到你想找到的 ${query}，换个关键字让蟹蟹再找找看？","hits_stats":"嘿嘿，蟹蟹帮你找到了${hits}个结果，用了${time}毫秒，嘻嘻~"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://crab-in-the-northeast.github.io/demo3-waifu-tips.html"/>
+
+
+
+
+！
+  <title> | blog-东北小蟹蟹</title>
+  
+
+
+
+
+
+
+
+
+</head>
+<center> <iframe scrolling="no" frameborder="no" clocktype="html5" style="overflow:hidden;border:0;margin:0;padding:0;width:356px;height:180px;"src="https://www.clocklink.com/html5embed.php?clock=042&timezone=CCT&color=blue&size=356&Title=&Message=&Target=&From=2019,1,1,0,0,0"></iframe> </center>
+<br>
+<center><h1 style="font-family:楷体" id="content"><span id="jinrishici-content"></span></h1></center>
+<br>
+<center><h1 style="font-family:楷体" id="from">出自【<span id="jinrishici-dynasty"></span>】<span id="jinrishici-author"></span>《<span id="jinrishici-title"></span>》</h1></center>
+<script>
+var x=document.getElementById("content");
+x.style.color="White";
+var y=document.getElementById("from");
+y.style.color="White";
+</script>
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+<script type="text/javascript">
+  jinrishici.load(function(result) {
+    document.getElementById('jinrishici-content').style.fontSize = "30px"
+    document.getElementById('jinrishici-content').innerText = result.data.content
+    document.getElementById('jinrishici-dynasty').innerText = result.data.origin.dynasty
+    document.getElementById('jinrishici-author').innerText = result.data.origin.author
+    document.getElementById('jinrishici-title').innerText = result.data.origin.title
+  });
+</script>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+  <meta name="referrer" content="unsafe-url"/>
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="https://github.com/crab-in-the-northeast"><img width="149" height="149" style="position: absolute; top: 0; right: 0; border: 0;" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><!-- 公告栏时钟控件 -->
+
+
+<!-- 加载样式 -->
+
+<link rel="stylesheet" type="text/css" href="https://crab-in-the-northeast.github.io/live2d/waifu.css"/>
+<div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">blog-东北小蟹蟹</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">假如代码欺骗了你，<br>不要悲伤，不要心急！<br>因为代码还会接着欺骗你。</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页 home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于 about
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签 tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类 categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档 archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/collections/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            收藏 collections
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索 search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="你想找什么呀？蟹蟹帮你找找看，嘻嘻~" spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+ 
+
+</nav>
+
+
+
+<!-- 小老鼠游戏控件 -->
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+    
+    
+    <div class="post-block page">
+      <header class="post-header">
+
+	<h1 class="post-title" itemprop="name headline"></h1>
+
+
+
+</header>
+
+      
+      
+      
+      <div class="post-body">
+        
+        
+          <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Live2D 看板娘 v1.4 / Demo 3</title>
+    <link rel="stylesheet" type="text/css" href="assets/waifu.min.css?v=1.4.2"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+<body style="font-family: 'Microsoft YaHei';">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><h2><a href="https://www.fghrsh.net/post/123.html" style="color: #38A3DB; text-decoration: none;" target="_blank" rel="noopener">Live2D 看板娘 v1.4</a> / Demo 3</h2>
+    <h3> - 内置 waifu-tips.json <span style="font-size: 12px;color: #666">(博客园等网站引用推荐)</span></h3>
+    <ul>
+        <li><a href="demo1-default.html" style="color: #38A3DB; text-decoration: none;" title="常规博客引用推荐">Demo 1 - 常规引用</a></li>
+        <li><a href="demo2-autoload.html" style="color: #38A3DB; text-decoration: none;" title="一般网站引用推荐">Demo 2 - 自动加载 autoload.js</a></li>
+        <li><span title="博客园等网站引用推荐">Demo 3 (当前面页)</span></li>
+    </ul>
+    
+    <code><pre>
+&lt;!DOCTYPE html&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+&lt;head&gt;
+    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+    &lt;title&gt;Live2D 看板娘 v1.4 / Demo 3&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;assets/waifu.min.css?v=1.4.2&quot;/&gt;
+&lt;/head&gt;
+&lt;body style=&quot;font-family: &#x27;Microsoft YaHei&#x27;;&quot;&gt;
+    &lt;h2&gt;&lt;a href=&quot;https://www.fghrsh.net/post/123.html&quot; style=&quot;color: #38A3DB; text-decoration: none;&quot;&gt;Live2D 看板娘 v1.4&lt;/a&gt; / Demo 3&lt;/h2&gt;
+    &lt;h3&gt; - 内置 waifu-tips.json &lt;span style=&quot;font-size: 12px;color: #666&quot;&gt;(博客园等网站引用推荐)&lt;/span&gt;&lt;/h3&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;demo1-default.html&quot; style=&quot;color: #38A3DB; text-decoration: none;&quot; title=&quot;常规博客引用推荐&quot;&gt;Demo 1 - 常规引用&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;demo2-autoload.html&quot; style=&quot;color: #38A3DB; text-decoration: none;&quot; title=&quot;一般网站引用推荐&quot;&gt;Demo 2 - 自动加载 autoload.js&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;span title=&quot;博客园等网站引用推荐&quot;&gt;Demo 3 (当前面页)&lt;/span&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    
+    &lt;!-- waifu-tips.js 依赖 JQuery 库 --&gt;
+    &lt;script src=&quot;assets/jquery.min.js?v=3.3.1&quot;&gt;&lt;/script&gt;
+    
+    &lt;!-- 实现拖动效果，需引入 JQuery UI --&gt;
+    &lt;script src=&quot;assets/jquery-ui.min.js?v=1.12.1&quot;&gt;&lt;/script&gt;
+    
+    &lt;script type=&quot;text/javascript&quot;&gt;
+    /* 把 autoload.js 内容直接内置 */
+    $(&#x27;body&#x27;).append(&#x27;&lt;div class=&quot;waifu&quot;&gt;&lt;div class=&quot;waifu-tips&quot;&gt;&lt;/div&gt;&lt;canvas id=&quot;live2d&quot; class=&quot;live2d&quot;&gt;&lt;/canvas&gt;&lt;div class=&quot;waifu-tool&quot;&gt;&lt;span class=&quot;fui-home&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fui-chat&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fui-eye&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fui-user&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fui-photo&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fui-info-circle&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fui-cross&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&#x27;);
+    $.ajax({url: &#x27;assets/waifu-tips.js?v=1.4.2&#x27;,dataType:&quot;script&quot;, cache: true, async: false});
+    $.ajax({url: &#x27;assets/live2d.min.js?v=1.0.5&#x27;,dataType:&quot;script&quot;, cache: true, async: false});
+        
+    /* 可直接修改部分参数 */
+    live2d_settings[&#x27;hitokotoAPI&#x27;] = &#x27;jinrishici.com&#x27;; // 一言 API
+    live2d_settings[&#x27;modelId&#x27;] = 2;                    // 默认模型 ID
+    live2d_settings[&#x27;modelTexturesId&#x27;] = 6;            // 默认材质 ID
+    live2d_settings[&#x27;modelStorage&#x27;] = false;           // 不储存模型 ID
+    live2d_settings[&#x27;canCloseLive2d&#x27;] = false;         // 隐藏 关闭看板娘 按钮
+    live2d_settings[&#x27;canTurnToHomePage&#x27;] = false;      // 隐藏 返回首页 按钮
+    live2d_settings[&#x27;waifuSize&#x27;] = &#x27;600x535&#x27;;          // 看板娘大小
+    live2d_settings[&#x27;waifuTipsSize&#x27;] = &#x27;570x150&#x27;;      // 提示框大小
+    live2d_settings[&#x27;waifuFontSize&#x27;] = &#x27;30px&#x27;;         // 提示框字体
+    live2d_settings[&#x27;waifuEdgeSide&#x27;] = &#x27;right:30&#x27;;     // 看板娘贴边方向
+    live2d_settings[&#x27;waifuToolFont&#x27;] = &#x27;36px&#x27;;         // 工具栏字体
+    live2d_settings[&#x27;waifuToolLine&#x27;] = &#x27;50px&#x27;;         // 工具栏行高
+    live2d_settings[&#x27;waifuToolTop&#x27;] = &#x27;-60px&#x27;;         // 工具栏顶部边距
+    live2d_settings[&#x27;waifuDraggable&#x27;] = &#x27;axis-x&#x27;;      // 拖拽样式
+        
+    /* 内置 waifu-tips.json */
+    initModel({
+        &quot;waifu&quot;: {
+            &quot;console_open_msg&quot;: [&quot;哈哈，你打开了控制台，是想要看看我的秘密吗？&quot;],
+            &quot;copy_message&quot;: [&quot;你都复制了些什么呀，转载要记得加上出处哦&quot;],
+            &quot;screenshot_message&quot;: [&quot;照好了嘛，是不是很可爱呢？&quot;],
+            &quot;hidden_message&quot;: [&quot;我们还能再见面的吧…&quot;],
+            &quot;load_rand_textures&quot;: [&quot;我还没有其他衣服呢&quot;, &quot;我的新衣服好看嘛&quot;],
+            &quot;hour_tips&quot;: {
+                &quot;t5-7&quot;: [&quot;早上好！一日之计在于晨，美好的一天就要开始了&quot;],
+                &quot;t7-11&quot;: [&quot;上午好！工作顺利嘛，不要久坐，多起来走动走动哦！&quot;],
+                &quot;t11-14&quot;: [&quot;中午了，工作了一个上午，现在是午餐时间！&quot;],
+                &quot;t14-17&quot;: [&quot;午后很容易犯困呢，今天的运动目标完成了吗？&quot;],
+                &quot;t17-19&quot;: [&quot;傍晚了！窗外夕阳的景色很美丽呢，最美不过夕阳红~&quot;],
+                &quot;t19-21&quot;: [&quot;晚上好，今天过得怎么样？&quot;],
+                &quot;t21-23&quot;: [&quot;已经这么晚了呀，早点休息吧，晚安~&quot;],
+                &quot;t23-5&quot;: [&quot;你是夜猫子呀？这么晚还不睡觉，明天起的来嘛&quot;],
+                &quot;default&quot;: [&quot;嗨~ 快来逗我玩吧！&quot;]
+            },
+            &quot;referrer_message&quot;: {
+                &quot;localhost&quot;: [&quot;欢迎阅读&lt;span style=\&quot;color:#0099cc;\&quot;&gt;『&quot;, &quot;』&lt;/span&gt;&quot;, &quot; - &quot;],
+                &quot;baidu&quot;: [&quot;Hello! 来自 百度搜索 的朋友&lt;br&gt;你是搜索 &lt;span style=\&quot;color:#0099cc;\&quot;&gt;&quot;, &quot;&lt;/span&gt; 找到的我吗？&quot;],
+                &quot;so&quot;: [&quot;Hello! 来自 360搜索 的朋友&lt;br&gt;你是搜索 &lt;span style=\&quot;color:#0099cc;\&quot;&gt;&quot;, &quot;&lt;/span&gt; 找到的我吗？&quot;],
+                &quot;google&quot;: [&quot;Hello! 来自 谷歌搜索 的朋友&lt;br&gt;欢迎阅读&lt;span style=\&quot;color:#0099cc;\&quot;&gt;『&quot;, &quot;』&lt;/span&gt;&quot;, &quot; - &quot;],
+                &quot;default&quot;: [&quot;Hello! 来自 &lt;span style=\&quot;color:#0099cc;\&quot;&gt;&quot;, &quot;&lt;/span&gt; 的朋友&quot;],
+                &quot;none&quot;: [&quot;欢迎阅读&lt;span style=\&quot;color:#0099cc;\&quot;&gt;『&quot;, &quot;』&lt;/span&gt;&quot;, &quot; - &quot;]
+            },
+            &quot;referrer_hostname&quot;: {
+                &quot;example.com&quot;: [&quot;示例网站&quot;],
+                &quot;www.fghrsh.net&quot;: [&quot;FGHRSH 的博客&quot;]
+            },
+            &quot;model_message&quot;: {
+                &quot;1&quot;: [&quot;来自 Potion Maker 的 Pio 酱 ~&quot;],
+                &quot;2&quot;: [&quot;来自 Potion Maker 的 Tia 酱 ~&quot;]  
+            },
+            &quot;hitokoto_api_message&quot;: {
+                &quot;lwl12.com&quot;: [&quot;这句一言来自 &lt;span style=\&quot;color:#0099cc;\&quot;&gt;『{source}』&lt;/span&gt;&quot;, &quot;，是 &lt;span style=\&quot;color:#0099cc;\&quot;&gt;{creator}&lt;/span&gt; 投稿的&quot;, &quot;。&quot;],
+                &quot;fghrsh.net&quot;: [&quot;这句一言出处是 &lt;span style=\&quot;color:#0099cc;\&quot;&gt;『{source}』&lt;/span&gt;，是 &lt;span style=\&quot;color:#0099cc;\&quot;&gt;FGHRSH&lt;/span&gt; 在 {date} 收藏的！&quot;],
+                &quot;jinrishici.com&quot;: [&quot;这句诗词出自 &lt;span style=\&quot;color:#0099cc;\&quot;&gt;《{title}》&lt;/span&gt;，是 {dynasty}诗人 {author} 创作的！&quot;],
+                &quot;hitokoto.cn&quot;: [&quot;这句一言来自 &lt;span style=\&quot;color:#0099cc;\&quot;&gt;『{source}』&lt;/span&gt;，是 &lt;span style=\&quot;color:#0099cc;\&quot;&gt;{creator}&lt;/span&gt; 在 hitokoto.cn 投稿的。&quot;]
+            }
+        },
+        &quot;mouseover&quot;: [
+            { &quot;selector&quot;: &quot;.container a[href^=&#x27;http&#x27;]&quot;, &quot;text&quot;: [&quot;要看看 &lt;span style=\&quot;color:#0099cc;\&quot;&gt;{text}&lt;/span&gt; 么？&quot;] },
+            { &quot;selector&quot;: &quot;.fui-home&quot;, &quot;text&quot;: [&quot;点击前往首页，想回到上一页可以使用浏览器的后退功能哦&quot;] },
+            { &quot;selector&quot;: &quot;.fui-chat&quot;, &quot;text&quot;: [&quot;一言一语，一颦一笑。一字一句，一颗赛艇。&quot;] },
+            { &quot;selector&quot;: &quot;.fui-eye&quot;, &quot;text&quot;: [&quot;嗯··· 要切换 看板娘 吗？&quot;] },
+            { &quot;selector&quot;: &quot;.fui-user&quot;, &quot;text&quot;: [&quot;喜欢换装 Play 吗？&quot;] },
+            { &quot;selector&quot;: &quot;.fui-photo&quot;, &quot;text&quot;: [&quot;要拍张纪念照片吗？&quot;] },
+            { &quot;selector&quot;: &quot;.fui-info-circle&quot;, &quot;text&quot;: [&quot;这里有关于我的信息呢&quot;] },
+            { &quot;selector&quot;: &quot;.fui-cross&quot;, &quot;text&quot;: [&quot;你不喜欢我了吗...&quot;] },
+            { &quot;selector&quot;: &quot;#tor_show&quot;, &quot;text&quot;: [&quot;翻页比较麻烦吗，点击可以显示这篇文章的目录呢&quot;] },
+            { &quot;selector&quot;: &quot;#comment_go&quot;, &quot;text&quot;: [&quot;想要去评论些什么吗？&quot;] },
+            { &quot;selector&quot;: &quot;#night_mode&quot;, &quot;text&quot;: [&quot;深夜时要爱护眼睛呀&quot;] },
+            { &quot;selector&quot;: &quot;#qrcode&quot;, &quot;text&quot;: [&quot;手机扫一下就能继续看，很方便呢&quot;] },
+            { &quot;selector&quot;: &quot;.comment_reply&quot;, &quot;text&quot;: [&quot;要吐槽些什么呢&quot;] },
+            { &quot;selector&quot;: &quot;#back-to-top&quot;, &quot;text&quot;: [&quot;回到开始的地方吧&quot;] },
+            { &quot;selector&quot;: &quot;#author&quot;, &quot;text&quot;: [&quot;该怎么称呼你呢&quot;] },
+            { &quot;selector&quot;: &quot;#mail&quot;, &quot;text&quot;: [&quot;留下你的邮箱，不然就是无头像人士了&quot;] },
+            { &quot;selector&quot;: &quot;#url&quot;, &quot;text&quot;: [&quot;你的家在哪里呢，好让我去参观参观&quot;] },
+            { &quot;selector&quot;: &quot;#textarea&quot;, &quot;text&quot;: [&quot;认真填写哦，垃圾评论是禁止事项&quot;] },
+            { &quot;selector&quot;: &quot;.OwO-logo&quot;, &quot;text&quot;: [&quot;要插入一个表情吗&quot;] },
+            { &quot;selector&quot;: &quot;#csubmit&quot;, &quot;text&quot;: [&quot;要[提交]^(Commit)了吗，首次评论需要审核，请耐心等待~&quot;] },
+            { &quot;selector&quot;: &quot;.ImageBox&quot;, &quot;text&quot;: [&quot;点击图片可以放大呢&quot;] },
+            { &quot;selector&quot;: &quot;input[name=s]&quot;, &quot;text&quot;: [&quot;找不到想看的内容？搜索看看吧&quot;] },
+            { &quot;selector&quot;: &quot;.previous&quot;, &quot;text&quot;: [&quot;去上一页看看吧&quot;] },
+            { &quot;selector&quot;: &quot;.next&quot;, &quot;text&quot;: [&quot;去下一页看看吧&quot;] },
+            { &quot;selector&quot;: &quot;.dropdown-toggle&quot;, &quot;text&quot;: [&quot;这里是菜单&quot;] },
+            { &quot;selector&quot;: &quot;c-player a.play-icon&quot;, &quot;text&quot;: [&quot;想要听点音乐吗&quot;] },
+            { &quot;selector&quot;: &quot;c-player div.time&quot;, &quot;text&quot;: [&quot;在这里可以调整&lt;span style=\&quot;color:#0099cc;\&quot;&gt;播放进度&lt;/span&gt;呢&quot;] },
+            { &quot;selector&quot;: &quot;c-player div.volume&quot;, &quot;text&quot;: [&quot;在这里可以调整&lt;span style=\&quot;color:#0099cc;\&quot;&gt;音量&lt;/span&gt;呢&quot;] },
+            { &quot;selector&quot;: &quot;c-player div.list-button&quot;, &quot;text&quot;: [&quot;&lt;span style=\&quot;color:#0099cc;\&quot;&gt;播放列表&lt;/span&gt;里都有什么呢&quot;] },
+            { &quot;selector&quot;: &quot;c-player div.lyric-button&quot;, &quot;text&quot;: [&quot;有&lt;span style=\&quot;color:#0099cc;\&quot;&gt;歌词&lt;/span&gt;的话就能跟着一起唱呢&quot;] },
+            { &quot;selector&quot;: &quot;.waifu #live2d&quot;, &quot;text&quot;: [&quot;干嘛呢你，快把手拿开&quot;, &quot;鼠…鼠标放错地方了！&quot;] }
+        ],
+        &quot;click&quot;: [
+            {
+                &quot;selector&quot;: &quot;.waifu #live2d&quot;,
+                &quot;text&quot;: [
+                    &quot;是…是不小心碰到了吧&quot;,
+                    &quot;萝莉控是什么呀&quot;,
+                    &quot;你看到我的小熊了吗&quot;,
+                    &quot;再摸的话我可要报警了！⌇●﹏●⌇&quot;,
+                    &quot;110吗，这里有个变态一直在摸我(ó﹏ò｡)&quot;
+                ]
+            }
+        ],
+        &quot;seasons&quot;: [
+            { &quot;date&quot;: &quot;01/01&quot;, &quot;text&quot;: [&quot;&lt;span style=\&quot;color:#0099cc;\&quot;&gt;元旦&lt;/span&gt;了呢，新的一年又开始了，今年是{year}年~&quot;] },
+            { &quot;date&quot;: &quot;02/14&quot;, &quot;text&quot;: [&quot;又是一年&lt;span style=\&quot;color:#0099cc;\&quot;&gt;情人节&lt;/span&gt;，{year}年找到对象了嘛~&quot;] },
+            { &quot;date&quot;: &quot;03/08&quot;, &quot;text&quot;: [&quot;今天是&lt;span style=\&quot;color:#0099cc;\&quot;&gt;妇女节&lt;/span&gt;！&quot;] },
+            { &quot;date&quot;: &quot;03/12&quot;, &quot;text&quot;: [&quot;今天是&lt;span style=\&quot;color:#0099cc;\&quot;&gt;植树节&lt;/span&gt;，要保护环境呀&quot;] },
+            { &quot;date&quot;: &quot;04/01&quot;, &quot;text&quot;: [&quot;悄悄告诉你一个秘密~&lt;span style=\&quot;background-color:#34495e;\&quot;&gt;今天是愚人节，不要被骗了哦~&lt;/span&gt;&quot;] },
+            { &quot;date&quot;: &quot;05/01&quot;, &quot;text&quot;: [&quot;今天是&lt;span style=\&quot;color:#0099cc;\&quot;&gt;五一劳动节&lt;/span&gt;，计划好假期去哪里了吗~&quot;] },
+            { &quot;date&quot;: &quot;06/01&quot;, &quot;text&quot;: [&quot;&lt;span style=\&quot;color:#0099cc;\&quot;&gt;儿童节&lt;/span&gt;了呢，快活的时光总是短暂，要是永远长不大该多好啊…&quot;] },
+            { &quot;date&quot;: &quot;09/03&quot;, &quot;text&quot;: [&quot;&lt;span style=\&quot;color:#0099cc;\&quot;&gt;中国人民抗日战争胜利纪念日&lt;/span&gt;，铭记历史、缅怀先烈、珍爱和平、开创未来。&quot;] },
+            { &quot;date&quot;: &quot;09/10&quot;, &quot;text&quot;: [&quot;&lt;span style=\&quot;color:#0099cc;\&quot;&gt;教师节&lt;/span&gt;，在学校要给老师问声好呀~&quot;] },
+            { &quot;date&quot;: &quot;10/01&quot;, &quot;text&quot;: [&quot;&lt;span style=\&quot;color:#0099cc;\&quot;&gt;国庆节&lt;/span&gt;，新中国已经成立69年了呢&quot;] },
+            { &quot;date&quot;: &quot;11/05-11/12&quot;, &quot;text&quot;: [&quot;今年的&lt;span style=\&quot;color:#0099cc;\&quot;&gt;双十一&lt;/span&gt;是和谁一起过的呢~&quot;] },
+            { &quot;date&quot;: &quot;12/20-12/31&quot;, &quot;text&quot;: [&quot;这几天是&lt;span style=\&quot;color:#0099cc;\&quot;&gt;圣诞节&lt;/span&gt;，主人肯定又去剁手买买买了~&quot;] }
+        ]
+    });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre></code>
+    
+    <!-- waifu-tips.js 依赖 JQuery 库 -->
+    <script src="assets/jquery.min.js?v=3.3.1"></script>
+    
+    <!-- 实现拖动效果，需引入 JQuery UI -->
+    <script src="assets/jquery-ui.min.js?v=1.12.1"></script>
+    
+    <script type="text/javascript">
+    /* 把 autoload.js 内容直接内置 */
+    $('body').append('<div class="waifu"><div class="waifu-tips"></div><canvas id="live2d" class="live2d"></canvas><div class="waifu-tool"><span class="fui-home"></span> <span class="fui-chat"></span> <span class="fui-eye"></span> <span class="fui-user"></span> <span class="fui-photo"></span> <span class="fui-info-circle"></span> <span class="fui-cross"></span></div></div>');
+    $.ajax({url: 'assets/waifu-tips.js?v=1.4.2',dataType:"script", cache: true, async: false});
+    $.ajax({url: 'assets/live2d.min.js?v=1.0.5',dataType:"script", cache: true, async: false});
+        
+    /* 可直接修改部分参数 */
+    live2d_settings['hitokotoAPI'] = 'jinrishici.com'; // 一言 API
+    live2d_settings['modelId'] = 2;                    // 默认模型 ID
+    live2d_settings['modelTexturesId'] = 6;            // 默认材质 ID
+    live2d_settings['modelStorage'] = false;           // 不储存模型 ID
+    live2d_settings['canCloseLive2d'] = false;         // 隐藏 关闭看板娘 按钮
+    live2d_settings['canTurnToHomePage'] = false;      // 隐藏 返回首页 按钮
+    live2d_settings['waifuSize'] = '600x535';          // 看板娘大小
+    live2d_settings['waifuTipsSize'] = '570x150';      // 提示框大小
+    live2d_settings['waifuFontSize'] = '30px';         // 提示框字体
+    live2d_settings['waifuEdgeSide'] = 'right:30';     // 看板娘贴边方向
+    live2d_settings['waifuToolFont'] = '36px';         // 工具栏字体
+    live2d_settings['waifuToolLine'] = '50px';         // 工具栏行高
+    live2d_settings['waifuToolTop'] = '-60px';         // 工具栏顶部边距
+    live2d_settings['waifuDraggable'] = 'axis-x';      // 拖拽样式
+        
+    /* 内置 waifu-tips.json */
+    initModel({
+        "waifu": {
+            "console_open_msg": ["哈哈，你打开了控制台，是想要看看我的秘密吗？"],
+            "copy_message": ["你都复制了些什么呀，转载要记得加上出处哦"],
+            "screenshot_message": ["照好了嘛，是不是很可爱呢？"],
+            "hidden_message": ["我们还能再见面的吧…"],
+            "load_rand_textures": ["我还没有其他衣服呢", "我的新衣服好看嘛"],
+            "hour_tips": {
+                "t5-7": ["早上好！一日之计在于晨，美好的一天就要开始了"],
+                "t7-11": ["上午好！工作顺利嘛，不要久坐，多起来走动走动哦！"],
+                "t11-14": ["中午了，工作了一个上午，现在是午餐时间！"],
+                "t14-17": ["午后很容易犯困呢，今天的运动目标完成了吗？"],
+                "t17-19": ["傍晚了！窗外夕阳的景色很美丽呢，最美不过夕阳红~"],
+                "t19-21": ["晚上好，今天过得怎么样？"],
+                "t21-23": ["已经这么晚了呀，早点休息吧，晚安~"],
+                "t23-5": ["你是夜猫子呀？这么晚还不睡觉，明天起的来嘛"],
+                "default": ["嗨~ 快来逗我玩吧！"]
+            },
+            "referrer_message": {
+                "localhost": ["欢迎阅读<span style=\"color:#0099cc;\">『", "』</span>", " - "],
+                "baidu": ["Hello! 来自 百度搜索 的朋友<br>你是搜索 <span style=\"color:#0099cc;\">", "</span> 找到的我吗？"],
+                "so": ["Hello! 来自 360搜索 的朋友<br>你是搜索 <span style=\"color:#0099cc;\">", "</span> 找到的我吗？"],
+                "google": ["Hello! 来自 谷歌搜索 的朋友<br>欢迎阅读<span style=\"color:#0099cc;\">『", "』</span>", " - "],
+                "default": ["Hello! 来自 <span style=\"color:#0099cc;\">", "</span> 的朋友"],
+                "none": ["欢迎阅读<span style=\"color:#0099cc;\">『", "』</span>", " - "]
+            },
+            "referrer_hostname": {
+                "example.com": ["示例网站"],
+                "www.fghrsh.net": ["FGHRSH 的博客"]
+            },
+            "model_message": {
+                "1": ["来自 Potion Maker 的 Pio 酱 ~"],
+                "2": ["来自 Potion Maker 的 Tia 酱 ~"]  
+            },
+            "hitokoto_api_message": {
+                "lwl12.com": ["这句一言来自 <span style=\"color:#0099cc;\">『{source}』</span>", "，是 <span style=\"color:#0099cc;\">{creator}</span> 投稿的", "。"],
+                "fghrsh.net": ["这句一言出处是 <span style=\"color:#0099cc;\">『{source}』</span>，是 <span style=\"color:#0099cc;\">FGHRSH</span> 在 {date} 收藏的！"],
+                "jinrishici.com": ["这句诗词出自 <span style=\"color:#0099cc;\">《{title}》</span>，是 {dynasty}诗人 {author} 创作的！"],
+                "hitokoto.cn": ["这句一言来自 <span style=\"color:#0099cc;\">『{source}』</span>，是 <span style=\"color:#0099cc;\">{creator}</span> 在 hitokoto.cn 投稿的。"]
+            }
+        },
+        "mouseover": [
+            { "selector": ".container a[href^='http']", "text": ["要看看 <span style=\"color:#0099cc;\">{text}</span> 么？"] },
+            { "selector": ".fui-home", "text": ["点击前往首页，想回到上一页可以使用浏览器的后退功能哦"] },
+            { "selector": ".fui-chat", "text": ["一言一语，一颦一笑。一字一句，一颗赛艇。"] },
+            { "selector": ".fui-eye", "text": ["嗯··· 要切换 看板娘 吗？"] },
+            { "selector": ".fui-user", "text": ["喜欢换装 Play 吗？"] },
+            { "selector": ".fui-photo", "text": ["要拍张纪念照片吗？"] },
+            { "selector": ".fui-info-circle", "text": ["这里有关于我的信息呢"] },
+            { "selector": ".fui-cross", "text": ["你不喜欢我了吗..."] },
+            { "selector": "#tor_show", "text": ["翻页比较麻烦吗，点击可以显示这篇文章的目录呢"] },
+            { "selector": "#comment_go", "text": ["想要去评论些什么吗？"] },
+            { "selector": "#night_mode", "text": ["深夜时要爱护眼睛呀"] },
+            { "selector": "#qrcode", "text": ["手机扫一下就能继续看，很方便呢"] },
+            { "selector": ".comment_reply", "text": ["要吐槽些什么呢"] },
+            { "selector": "#back-to-top", "text": ["回到开始的地方吧"] },
+            { "selector": "#author", "text": ["该怎么称呼你呢"] },
+            { "selector": "#mail", "text": ["留下你的邮箱，不然就是无头像人士了"] },
+            { "selector": "#url", "text": ["你的家在哪里呢，好让我去参观参观"] },
+            { "selector": "#textarea", "text": ["认真填写哦，垃圾评论是禁止事项"] },
+            { "selector": ".OwO-logo", "text": ["要插入一个表情吗"] },
+            { "selector": "#csubmit", "text": ["要[提交]^(Commit)了吗，首次评论需要审核，请耐心等待~"] },
+            { "selector": ".ImageBox", "text": ["点击图片可以放大呢"] },
+            { "selector": "input[name=s]", "text": ["找不到想看的内容？搜索看看吧"] },
+            { "selector": ".previous", "text": ["去上一页看看吧"] },
+            { "selector": ".next", "text": ["去下一页看看吧"] },
+            { "selector": ".dropdown-toggle", "text": ["这里是菜单"] },
+            { "selector": "c-player a.play-icon", "text": ["想要听点音乐吗"] },
+            { "selector": "c-player div.time", "text": ["在这里可以调整<span style=\"color:#0099cc;\">播放进度</span>呢"] },
+            { "selector": "c-player div.volume", "text": ["在这里可以调整<span style=\"color:#0099cc;\">音量</span>呢"] },
+            { "selector": "c-player div.list-button", "text": ["<span style=\"color:#0099cc;\">播放列表</span>里都有什么呢"] },
+            { "selector": "c-player div.lyric-button", "text": ["有<span style=\"color:#0099cc;\">歌词</span>的话就能跟着一起唱呢"] },
+            { "selector": ".waifu #live2d", "text": ["干嘛呢你，快把手拿开", "鼠…鼠标放错地方了！"] }
+        ],
+        "click": [
+            {
+                "selector": ".waifu #live2d",
+                "text": [
+                    "是…是不小心碰到了吧",
+                    "萝莉控是什么呀",
+                    "你看到我的小熊了吗",
+                    "再摸的话我可要报警了！⌇●﹏●⌇",
+                    "110吗，这里有个变态一直在摸我(ó﹏ò｡)"
+                ]
+            }
+        ],
+        "seasons": [
+            { "date": "01/01", "text": ["<span style=\"color:#0099cc;\">元旦</span>了呢，新的一年又开始了，今年是{year}年~"] },
+            { "date": "02/14", "text": ["又是一年<span style=\"color:#0099cc;\">情人节</span>，{year}年找到对象了嘛~"] },
+            { "date": "03/08", "text": ["今天是<span style=\"color:#0099cc;\">妇女节</span>！"] },
+            { "date": "03/12", "text": ["今天是<span style=\"color:#0099cc;\">植树节</span>，要保护环境呀"] },
+            { "date": "04/01", "text": ["悄悄告诉你一个秘密~<span style=\"background-color:#34495e;\">今天是愚人节，不要被骗了哦~</span>"] },
+            { "date": "05/01", "text": ["今天是<span style=\"color:#0099cc;\">五一劳动节</span>，计划好假期去哪里了吗~"] },
+            { "date": "06/01", "text": ["<span style=\"color:#0099cc;\">儿童节</span>了呢，快活的时光总是短暂，要是永远长不大该多好啊…"] },
+            { "date": "09/03", "text": ["<span style=\"color:#0099cc;\">中国人民抗日战争胜利纪念日</span>，铭记历史、缅怀先烈、珍爱和平、开创未来。"] },
+            { "date": "09/10", "text": ["<span style=\"color:#0099cc;\">教师节</span>，在学校要给老师问声好呀~"] },
+            { "date": "10/01", "text": ["<span style=\"color:#0099cc;\">国庆节</span>，新中国已经成立69年了呢"] },
+            { "date": "11/05-11/12", "text": ["今年的<span style=\"color:#0099cc;\">双十一</span>是和谁一起过的呢~"] },
+            { "date": "12/20-12/31", "text": ["这几天是<span style=\"color:#0099cc;\">圣诞节</span>，主人肯定又去剁手买买买了~"] }
+        ]
+    });
+    </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+</body>
+</html>
+
+        
+      </div>
+      
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录 menu
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览 overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/kkksc03.gif"
+                alt="东北小蟹蟹" />
+            
+              <p class="site-author-name" itemprop="name">东北小蟹蟹</p>
+              <p class="site-description motion-element" itemprop="description">万事开头难，中间难，结尾……更难</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">日志 pos.</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类 cat.</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签 tag.</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友链区
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://xzdxrz.github.io/" title="兄主的仙人掌的blog" target="_blank">兄主的仙人掌的blog</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://scaft619.github.io/LTFBlog/index" title="LTF的blog" target="_blank">LTF的blog</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://apro1066.top/" title="A.pro的blog" target="_blank">A.pro的blog</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://aaadsgfh.github.io/" title="aaadsgfh的blog" target="_blank">aaadsgfh的blog</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">Live2D 看板娘 v1.4 / Demo 3</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.1.</span> <span class="nav-text"> - 内置 waifu-tips.json (博客园等网站引用推荐)</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">东北小蟹蟹</span>
+
+  
+</div>
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站已被<span id="busuanzi_value_site_uv"></span>位dalao访问
+</span>
+</div>
+
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共9.5k字</span>
+</div>
+
+<br>
+
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("01/27/2019 22:38:00");//在此处修改你的建站时间
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "东北小蟹蟹已成功存活 "+dnum+" 天 "; 
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+    } 
+setInterval("createtime()",250);
+</script>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1> <center> 哎呀！你竟然发现了我的秘密基地！ </center> </h1>
+<br>
+<center> 东北<del>大闸蟹</del>小蟹蟹要不然就是在写文章，要不然就是在优化blog，要不然就是在改hexo的<del>玄学</del>bug。。</center>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'wUXkY80O0p0bNQzOiefDkv1t-gzGzoHsz',
+        appKey: 'rsY5Yh4URQVUTj4VC0cf4qQh',
+        placeholder: 'ヾﾉ≧∀≦)o东北小蟹蟹期待你的评论哦~',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  <script type="text/javascript" src="/js/src/custom.js"></script>
+
+  <!-- 代码块复制功能 -->
+<script type="text/javascript" src="/js/src/clipboard.min.js"></script>  
+<script type="text/javascript" src="/js/src/clipboard-use.js"></script>
+<!-- 雪花特效 -->
+<script type="text/javascript">
+  var windowWidth = $(window).width();
+  if (windowWidth > 480) {
+    document.write('<script type="text/javascript" src="/js/src/snow.js"><\/script>');
+  }
+</script>
+
+
+</body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/clicklove.js"></script>
+
+<!-- 崩溃欺骗 -->
+<script type="text/javascript" src="/js/src/crash_cheat.js"></script>
