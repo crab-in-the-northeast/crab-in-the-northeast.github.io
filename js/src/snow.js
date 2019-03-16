@@ -1,128 +1,118 @@
-/*样式二*/
-/* 控制下雪 */
-function snowFall(snow) {
-    /* 可配置属性 */
-    snow = snow || {};
-    this.maxFlake = snow.maxFlake || 200;   /* 最多片数 */
-    this.flakeSize = snow.flakeSize || 10;  /* 雪花形状 */
-    this.fallSpeed = snow.fallSpeed || 1;   /* 坠落速度 */
-}
-/* 兼容写法 */
-requestAnimationFrame = window.requestAnimationFrame ||
-    window.mozRequestAnimationFrame ||
-    window.webkitRequestAnimationFrame ||
-    window.msRequestAnimationFrame ||
-    window.oRequestAnimationFrame ||
-    function(callback) { setTimeout(callback, 1000 / 60); };
 
-cancelAnimationFrame = window.cancelAnimationFrame ||
-    window.mozCancelAnimationFrame ||
-    window.webkitCancelAnimationFrame ||
-    window.msCancelAnimationFrame ||
-	window.oCancelAnimationFrame;
-/* 开始下雪 */
-snowFall.prototype.start = function(){
-    /* 创建画布 */
-    snowCanvas.apply(this);
-    /* 创建雪花形状 */
-    createFlakes.apply(this);
-    /* 画雪 */
-    drawSnow.apply(this)
-}
-/* 创建画布 */
-function snowCanvas() {
-    /* 添加Dom结点 */
-    var snowcanvas = document.createElement("canvas");
-    snowcanvas.id = "snowfall";
-    snowcanvas.width = window.innerWidth;
-    snowcanvas.height = document.body.clientHeight;
-    snowcanvas.setAttribute("style", "position:absolute; top: 0; left: 0; z-index: 1; pointer-events: none;");
-    document.getElementsByTagName("body")[0].appendChild(snowcanvas);
-    this.canvas = snowcanvas;
-    this.ctx = snowcanvas.getContext("2d");
-    /* 窗口大小改变的处理 */
-    window.onresize = function() {
-        snowcanvas.width = window.innerWidth;
-        /* snowcanvas.height = window.innerHeight */
+    if(true){
+        (function() {
+            var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame ||
+            function(callback) {
+                window.setTimeout(callback, 1000 / 60);
+            };
+            window.requestAnimationFrame = requestAnimationFrame;
+        })();
+        
+        (function() {
+            var flakes = [],
+                canvas = document.getElementById("Snow"),
+                ctx = canvas.getContext("2d"),
+                flakeCount = 240,
+                mX = -100,
+                mY = -100;
+            
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            
+            function snow() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+                for (var i = 0; i < flakeCount; i++) {
+                    var flake = flakes[i],
+                        x = mX,
+                        y = mY,
+                        minDist = 150,
+                        x2 = flake.x,
+                        y2 = flake.y;
+            
+                    var dist = Math.sqrt((x2 - x) * (x2 - x) + (y2 - y) * (y2 - y)),
+                        dx = x2 - x,
+                        dy = y2 - y;
+            
+                    if (dist < minDist) {
+                        var force = minDist / (dist * dist),
+                            xcomp = (x - x2) / dist,
+                            ycomp = (y - y2) / dist,
+                            deltaV = force / 2;
+            
+                        flake.velX -= deltaV * xcomp;
+                        flake.velY -= deltaV * ycomp;
+            
+                    } else {
+                        flake.velX *= .98;
+                        if (flake.velY <= flake.speed) {
+                            flake.velY = flake.speed
+                        }
+                        flake.velX += Math.cos(flake.step += .05) * flake.stepSize;
+                    }
+            
+                    ctx.fillStyle = "rgba(255,255,255," + flake.opacity + ")";
+                    flake.y += flake.velY;
+                    flake.x += flake.velX;
+                        
+                    if (flake.y >= canvas.height || flake.y <= 0) {
+                        reset(flake);
+                    }
+            
+                    if (flake.x >= canvas.width || flake.x <= 0) {
+                        reset(flake);
+                    }
+            
+                    ctx.beginPath();
+                    ctx.arc(flake.x, flake.y, flake.size, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+                requestAnimationFrame(snow);
+            };
+            
+            function reset(flake) {
+                flake.x = Math.floor(Math.random() * canvas.width);
+                flake.y = 0;
+                flake.size = (Math.random() * 3) + 5;
+                flake.speed = (Math.random() * 1) + 0.8;
+                flake.velY = flake.speed;
+                flake.velX = 0;
+                flake.opacity = (Math.random() * 0.5) + 0.1;
+            }
+            
+            function init() {
+                for (var i = 0; i < flakeCount; i++) {
+                    var x = Math.floor(Math.random() * canvas.width),
+                        y = Math.floor(Math.random() * canvas.height),
+                        size = (Math.random() * 3) + 5,
+                        speed = (Math.random() * 1) + 0.8,
+                        opacity = (Math.random() * 0.5) + 0.1;
+            
+                    flakes.push({
+                        speed: speed,
+                        velY: speed,
+                        velX: 0,
+                        x: x,
+                        y: y,
+                        size: size,
+                        stepSize: (Math.random()) / 30 * 1,
+                        step: 0,
+                        angle: 180,
+                        opacity: opacity
+                    });
+                }
+            
+                snow();
+            };
+            
+            document.addEventListener("mousemove", function(e) {
+                mX = e.clientX,
+                mY = e.clientY
+            });
+            window.addEventListener("resize", function() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            });
+            init();
+        })();
     }
-}
-/* 雪运动对象 */
-function flakeMove(canvasWidth, canvasHeight, flakeSize, fallSpeed) {
-    this.x = Math.floor(Math.random() * canvasWidth);   /* x坐标 */
-    this.y = Math.floor(Math.random() * canvasHeight);  /* y坐标 */
-    this.size = Math.random() * flakeSize + 2;          /* 形状 */
-    this.maxSize = flakeSize;                           /* 最大形状 */
-    this.speed = Math.random() * 1 + fallSpeed;         /* 坠落速度 */
-    this.fallSpeed = fallSpeed;                         /* 坠落速度 */
-    this.velY = this.speed;                             /* Y方向速度 */
-    this.velX = 0;                                      /* X方向速度 */
-    this.stepSize = Math.random() / 30;                 /* 步长 */
-    this.step = 0                                       /* 步数 */
-}
-flakeMove.prototype.update = function() {
-    var x = this.x,
-        y = this.y;
-    /* 左右摆动(余弦) */
-    this.velX *= 0.98;
-    if (this.velY <= this.speed) {
-        this.velY = this.speed
-    }
-    this.velX += Math.cos(this.step += .05) * this.stepSize;
-
-    this.y += this.velY;
-    this.x += this.velX;
-    /* 飞出边界的处理 */
-    if (this.x >= canvas.width || this.x <= 0 || this.y >= canvas.height || this.y <= 0) {
-        this.reset(canvas.width, canvas.height)
-    }
-};
-/* 飞出边界-放置最顶端继续坠落 */
-flakeMove.prototype.reset = function(width, height) {
-    this.x = Math.floor(Math.random() * width);
-    this.y = 0;
-    this.size = Math.random() * this.maxSize + 2;
-    this.speed = Math.random() * 1 + this.fallSpeed;
-    this.velY = this.speed;
-    this.velX = 0;
-};
-// 渲染雪花-随机形状（此处可修改雪花颜色！！！）
-flakeMove.prototype.render = function(ctx) {
-    var snowFlake = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size);
-    snowFlake.addColorStop(0, "rgba(255, 255, 255, 0.9)");  /* 此处是雪花颜色，默认是白色 */
-    snowFlake.addColorStop(.5, "rgba(255, 255, 255, 0.5)"); /* 若要改为其他颜色，请自行查 */
-    snowFlake.addColorStop(1, "rgba(255, 255, 255, 0)");    /* 找16进制的RGB 颜色代码。 */
-    ctx.save();
-    ctx.fillStyle = snowFlake;
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-    ctx.fill();
-    ctx.restore();
-};
-/* 创建雪花-定义形状 */
-function createFlakes() {
-    var maxFlake = this.maxFlake,
-        flakes = this.flakes = [],
-        canvas = this.canvas;
-    for (var i = 0; i < maxFlake; i++) {
-        flakes.push(new flakeMove(canvas.width, canvas.height, this.flakeSize, this.fallSpeed))
-    }
-}
-/* 画雪 */
-function drawSnow() {
-    var maxFlake = this.maxFlake,
-        flakes = this.flakes;
-    ctx = this.ctx, canvas = this.canvas, that = this;
-    /* 清空雪花 */
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    for (var e = 0; e < maxFlake; e++) {
-        flakes[e].update();
-        flakes[e].render(ctx);
-    }
-    /*  一帧一帧的画 */
-    this.loop = requestAnimationFrame(function() {
-        drawSnow.apply(that);
-    });
-}
-/* 调用及控制方法 */
-var snow = new snowFall({maxFlake:60});
-snow.start();
