@@ -1940,7 +1940,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #4f29e5;
+  background: #919f21;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3442,7 +3442,7 @@ a:hover,
   box-sizing: border-box;
   width: 240px;
   color: #555;
-  background: #fff;
+  background: #000;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
   border-radius: initial;
   opacity: 0;
